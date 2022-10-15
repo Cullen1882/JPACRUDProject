@@ -9,7 +9,7 @@ public interface PropertyDAO {
 	
 	List<Property> findAll();
 	Property findById(int propertyId);
-	Property create(int propertyId, Property property);
+	Property create(Property property);
 	Property update(int propertyId, Property property);
 	boolean deleteById(int propertyId);
 

@@ -43,7 +43,7 @@ class PropertyTest {
 	@Test
 	void test_property_ent_mapping() {
 		assertNotNull(prop);
-		assertEquals("999 Waterside Drive", prop.getStreet());
+		assertEquals("9324 1st View St", prop.getStreet());
 	}
 
 }
