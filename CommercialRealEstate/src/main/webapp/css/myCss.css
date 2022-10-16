@@ -1,2 +1,12 @@
 @charset "UTF-8";
 
+body {
+	background-color: lightgray;
+}
+
+div h1{
+	font-family: monospace;
+	font-size: large;
+	font-weight: bold;
+	text-align: center;
+}
