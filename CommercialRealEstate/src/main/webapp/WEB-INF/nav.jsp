@@ -13,7 +13,7 @@
 <title>nav</title>
 </head>
 <body>
-	<a href="index.jsp" class="nav-link">Home</a>
+	<a href="home.do" class="nav-link">Home</a>
 	<a href="#">Contact Us</a>
 </body>
 </html>

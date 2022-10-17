@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +11,14 @@
 	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 	crossorigin="anonymous">
 <meta charset="UTF-8">
-<title>Property Details</title>
+<link rel="stylesheet" href="css/myCss.css">
+<jsp:include page="bootstrapHead.jsp"/>
+<title>Property Removed</title>
 </head>
 <body>
 <jsp:include page="nav.jsp"/>
-<h1>Property Results</h1>
-<c:out value="${property.street},${property.city}, ${property.numUnits}"></c:out>
-<a href="updateForm.do?id=${property.id}">Update Property</a>
-<a href="delete.do?id=${property.id}">Delete Property</a>
-
+<h1>Property Has been Removed</h1>
+	<c:out value="${deleted.street}, ${deleted.city}, ${deleted.numUnits}">></c:out>
 
 </body>
 </html>

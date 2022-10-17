@@ -60,8 +60,14 @@ public class PropertyDAOImpl implements PropertyDAO {
 
 	@Override
 	public boolean deleteById(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean removed = false;
+		Property remProp = em.find(Property.class, id);
+		if(remProp != null) {
+			
+			em.remove(remProp);
+			removed = !em.contains(remProp);
+		}
+		return removed;
 	}
 
 }

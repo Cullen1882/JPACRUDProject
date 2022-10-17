@@ -30,7 +30,7 @@ public class PropertyController {
 	@RequestMapping(path="addProp.do", method=RequestMethod.POST)
 	public String add(Property property, Model model) {
 		model.addAttribute("added", dao.create(property));
-		return "showProp";
+		return "added";
 	}
 	@RequestMapping(path="updateForm.do", method=RequestMethod.GET)
 	public String updateForm(int id, Model model) {
@@ -40,6 +40,11 @@ public class PropertyController {
 	@RequestMapping(path="update.do", method=RequestMethod.GET)
 	public String update(Integer id, Property property, Model model) {
 		model.addAttribute("update", dao.update(id, property));
-		return "showProp";
+		return "updated";
+	}
+	@RequestMapping(path="delete.do", method=RequestMethod.GET)
+	public String delete(int id, Model model) {
+		model.addAttribute("deleted", dao.deleteById(id));
+		return "deleted";
 	}
 }
